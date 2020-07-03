@@ -2,7 +2,7 @@
 
 Originated from the Go Gala hackthon.
 
-![img](res/m.jpg)
+![img](l10/res/my_res.jpg)
 
 ## Inspiration:
 
