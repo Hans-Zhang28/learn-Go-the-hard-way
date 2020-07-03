@@ -1,17 +1,10 @@
 package main
 
 import (
-	"reflect"
+	"fmt"
+	"sync"
 )
 
-<<<<<<< Updated upstream
-//Reverse reverses a slice.
-func Reverse(slice interface{}) {
-	n := reflect.ValueOf(slice).Len()
-	swap := reflect.Swapper(slice)
-	for i, j := 0, n-1; i < j; i, j = i+1, j-1 {
-		swap(i, j)
-=======
 // Parallelsum does parallel vector sum,
 // in each loop,buffered input capacity will be cut half
 // for the next loop to Sum goroutine to consume.
@@ -54,13 +47,10 @@ func ParallelSum(slcs ...[]int) []int {
 		}
 		output = make(chan []int)
 		close(input)
->>>>>>> Stashed changes
 	}
+	return result
 }
 
-<<<<<<< Updated upstream
-func main() {
-=======
 //TODO:complete the Sum for the parallel sum function.
 func Sum(sum chan []int) (output chan []int) {
 	out := make(chan []int, cap(sum))
@@ -85,5 +75,4 @@ func main() {
 		It's different from the custom parallel vector sum in which sum numbers at every index of the vectors in a goroutine.
 		In this exercies,vector is just a abstract,you can change it to a struct or any thing else that can be sumed up.
 	`)
->>>>>>> Stashed changes
 }
